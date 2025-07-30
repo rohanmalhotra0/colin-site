@@ -1,21 +1,19 @@
 # Intro
 
-As a Computer Science and Economics student at NYU, I am passionate about leveraging data science, machine learning, and analytics to drive impactful solutions. My experiences include building predictive models for stock markets, developing web scrapers for data automation, and contributing to innovative CubeSat research. Through internships and projects, I have honed my skills in Python, Java, MATLAB, and frameworks like React and Flask. Notable achievements include founding a volunteer program steaching coding to special-needs students and leading a machine learning project correlating coffee sales data with financial market trends. I thrive in collaborative environments, tackling complex problems with creativity and data-driven insights.
+Hi, my name is Colin Loftus and I’m from a very boring town in North New Jersey called Chatham. I am currently a student at the University of Delaware and am a Business Undeclared major though I am very interested in exploring the marketing world. Throughout high school, I worked as a lifeguard at my local pool during the summer which not only gave me useful skills like how to perform CPR but also taught me to be responsible and accountable. Being an older brother, and one of the more experienced lifeguards at my pool, I also feel as though I have the traits and experience to be a very good leader.
 
 
 # I Like
 
-- Running
+- Movies 
 - Weightlifting
 - Volunteering
-- Cooking
+- Dire Straits  
 - Summer
 
-# Fun Facts
 
-- I have an arm disability called radial ulnar synotosis, basically I can't flip my hands such that they are underhanded. 
-- I grew up in Chatham New Jersey but was born in Freemont California
-- I LOVE cooking and it has been a passion of mine since I was a kid watching my mom cook while I sat on the kitchen counter
+
+
 
 
 

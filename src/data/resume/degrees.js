@@ -1,14 +1,8 @@
 const degrees = [
   {
-    school: 'New York University',
-    degree: 'B.A. in Computer Science',
-    link: 'https://vt.edu',
-    year: 2028,
-  },
-  {
-    school: 'New York University',
-    degree: 'B.A. in Economics',
-    link: 'https://vt.edu',
+    school: 'University of Delaware',
+    degree: 'B.S. in Marketing',
+    link: 'http://udel.edu/apply/undergraduate-admissions/major-finder/marketing/',
     year: 2028,
   },
 

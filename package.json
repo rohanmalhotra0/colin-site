@@ -1,11 +1,11 @@
 {
   "name": "personal-site",
   "version": "4.0.0",
-  "homepage": "https://rohanm.org",
+  "homepage": "https://colinloftus.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rohanmalhotra0/personal-siteRohan.git"
+    "url": "https://github.com/rohanmalhotra0/colin-site.git"
   },
   "engines": {
     "node": ">=16.x"

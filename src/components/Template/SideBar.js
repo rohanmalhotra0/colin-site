@@ -8,13 +8,13 @@ const SideBar = () => (
     <section id="intro">
       <img
         src={`${process.env.PUBLIC_URL}/profile.jpg`}
-        alt="Rohan Malhotra"
+        alt="Colin Loftus"
         style={{ width: '150px', borderRadius: '8px' }}
       />
       <header>
-        <h2>Rohan Malhotra</h2>
+        <h2>Colin Loftus</h2>
         <p>
-          <a href="mailto:ram9952@nyu.edu">ram9952@nyu.edu</a>
+          <a href="mailto:colinploftus@gmail.com">colinploftus@gmail.com</a>
         </p>
       </header>
     </section>
@@ -22,12 +22,9 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        Hi, I&apos;m Rohan Malhotra. I am a sophmore at New York University,
-        double majoring in Computer Science and Economics.
-        I have a passion for developing innovative software solutions
-        and exploring emerging technologies. In my free time, I enjoy
-        working on coding projects, learning new programming languages,
-        and contributing to open source.
+        Hi, I&apos;m Colin Loftus.  I’m from a very boring town in North New Jersey called Chatham.
+        I am currently a student at the University of Delaware and am a Business Undeclared major
+        though I am very interested in exploring the marketing world.
       </p>
       <ul className="actions">
         <li>
@@ -47,7 +44,7 @@ const SideBar = () => (
     <section id="footer">
       <ContactIcons />
       <p className="copyright">
-        &copy; Rohan Malhotra <Link to="/">rohanm.org</Link>.
+        &copy; Made by Rohan Malhotra <Link to="/">rohanm.org</Link>.
       </p>
     </section>
   </section>
