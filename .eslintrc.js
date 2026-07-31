@@ -7,7 +7,7 @@ module.exports = {
     node: true,
   },
   extends: 'airbnb',
-  ignorePatterns: ['node_modules/', 'build/'],
+  ignorePatterns: ['node_modules/', 'build/', 'docs/'],
   parser: '@babel/eslint-parser',
   plugins: ['react'],
   rules: {

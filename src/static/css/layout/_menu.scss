@@ -8,14 +8,12 @@
 
 #menu {
   @include vendor("transform", "translateX(#{_size(menu)})");
-  @include vendor(
-    "transition",
-    ("transform #{_duration(menu)} ease", "visibility #{_duration(menu)}")
-  );
+  transition: transform #{_duration(menu)} $ease-out-quint,
+    visibility #{_duration(menu)};
   -webkit-overflow-scrolling: touch;
   background: _palette(bg);
   border-left: solid 1px _palette(border);
-  box-shadow: none;
+  box-shadow: $shadow-menu;
   height: 100%;
   max-width: 80%;
   overflow-y: auto;
@@ -59,11 +57,10 @@
         }
 
         p {
-          font-family: _font(family-heading);
+          font-family: _font(family-label);
           font-size: 0.6em;
-          font-weight: _font(weight-heading);
+          font-weight: 600;
           letter-spacing: _font(kerning-heading);
-          letter-spacing: _size(letter-spacing-alt);
           margin-bottom: 0;
           text-decoration: none;
           text-transform: uppercase;

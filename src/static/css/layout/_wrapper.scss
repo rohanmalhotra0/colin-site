@@ -9,7 +9,7 @@
 #wrapper {
   @include vendor("display", "flex");
   @include vendor("flex-direction", "row-reverse");
-  @include vendor("transition", "opacity #{_duration(menu)} ease");
+  transition: opacity #{_duration(menu)} $ease-out-quint;
   margin: 0 auto;
   max-width: 100%;
   opacity: 1;
@@ -29,7 +29,10 @@
   }
 
   @include breakpoint(small) {
-    padding: _size(section-spacing-small);
+    padding: _size(section-spacing-small)
+      max(#{_size(section-spacing-small)}, env(safe-area-inset-right))
+      max(#{_size(section-spacing-small)}, env(safe-area-inset-bottom))
+      max(#{_size(section-spacing-small)}, env(safe-area-inset-left));
   }
 
   body.single & {

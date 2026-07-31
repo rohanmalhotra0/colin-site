@@ -6,11 +6,13 @@ import Analytics from '../components/Template/Analytics';
 import Navigation from '../components/Template/Navigation';
 import SideBar from '../components/Template/SideBar';
 import ScrollToTop from '../components/Template/ScrollToTop';
+import ScrollReveal from '../components/Template/ScrollReveal';
 
 const Main = (props) => (
   <HelmetProvider>
     <Analytics />
     <ScrollToTop />
+    <ScrollReveal />
     <Helmet
       titleTemplate="%s | Colin Loftus"
       defaultTitle="Colin Loftus"

@@ -6,15 +6,22 @@
 
 /* Type */
 
+::selection {
+  background: rgba(255, 210, 0, 0.4);
+  color: #1c1917;
+}
+
 body,
 input,
 select,
 textarea {
   color: _palette(fg);
   font-family: _font(family);
-  font-size: 14pt;
+  font-size: 13pt;
   font-weight: _font(weight);
-  line-height: 1.75;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 
   @include breakpoint(xlarge) {
     font-size: 12pt;
@@ -38,29 +45,34 @@ textarea {
 }
 
 a {
-  @include vendor(
-    "transition",
-    (
-      "color #{_duration(transition)} ease",
-      "border-bottom-color #{_duration(transition)} ease"
-    )
-  );
-  border-bottom: dotted 1px _palette(border-alt);
-  color: inherit;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 92%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  color: _palette(accent);
   text-decoration: none;
-
-  &:before {
-    @include vendor("transition", ("color #{_duration(transition)} ease"));
-  }
+  transition: color #{_duration(transition)} $ease-out-soft,
+    background-size #{_duration(transition)} $ease-out-soft;
 
   &:hover {
-    border-bottom-color: transparent;
-    color: _palette(accent) !important;
-
-    &:before {
-      color: _palette(accent) !important;
-    }
+    background-size: 100% 1px;
+    color: _palette(accent-hover);
   }
+}
+
+// Non-text links are exempt from the underline slide.
+#header a,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+.icon,
+.image,
+.logo,
+.button {
+  background-image: none;
 }
 
 strong,
@@ -86,11 +98,12 @@ h5,
 h6 {
   color: _palette(fg-bold);
   font-family: _font(family-heading);
+  font-variant-numeric: oldstyle-nums;
   font-weight: _font(weight-heading-bold);
-  letter-spacing: _font(kerning-heading);
-  line-height: 1.65;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
   margin: 0 0 (_size(element-margin) * 0.5) 0;
-  text-transform: uppercase;
+  text-transform: none;
 
   a {
     color: inherit;
@@ -99,23 +112,27 @@ h6 {
 }
 
 h2 {
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 h3 {
-  font-size: 0.9em;
+  font-size: 1.17em;
+  letter-spacing: -0.01em;
 }
 
 h4 {
-  font-size: 0.7em;
+  font-size: 1em;
+  font-weight: _font(weight-heading);
 }
 
 h5 {
-  font-size: 0.7em;
+  font-size: 1em;
+  font-weight: _font(weight-heading);
 }
 
 h6 {
-  font-size: 0.7em;
+  font-size: 1em;
+  font-weight: _font(weight-heading);
 }
 
 sub {
@@ -131,7 +148,9 @@ sup {
 }
 
 blockquote {
-  border-left: solid 4px _palette(border);
+  border-left: solid 3px _palette(gold);
+  font-family: _font(family-heading);
+  font-size: 1.15em;
   font-style: italic;
   margin: 0 0 _size(element-margin) 0;
   padding: calc(_size(element-margin) / 4) 0 calc(_size(element-margin) / 4)

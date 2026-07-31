@@ -11,3 +11,51 @@
   -ms-flex: 1;
   width: 100%;
 }
+
+/* Entrance — react-router remounts page content on navigation, so this
+   doubles as the page transition. */
+
+@keyframes post-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#main > .post,
+#main .mini-post {
+  animation: post-rise _duration(reveal) $ease-out-quint backwards;
+}
+
+#main > .post:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+#main > .post:nth-child(2),
+#main .cell-container:nth-child(2) .mini-post {
+  animation-delay: 0.12s;
+}
+
+#main > .post:nth-child(3),
+#main .cell-container:nth-child(3) .mini-post {
+  animation-delay: 0.19s;
+}
+
+#main > .post:nth-child(4),
+#main .cell-container:nth-child(4) .mini-post {
+  animation-delay: 0.26s;
+}
+
+#main > .post:nth-child(n + 5),
+#main .cell-container:nth-child(n + 5) .mini-post {
+  animation-delay: 0.3s;
+}
+
+#sidebar > section {
+  animation: post-rise _duration(reveal) $ease-out-quint 0.15s backwards;
+}

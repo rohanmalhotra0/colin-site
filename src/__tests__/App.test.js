@@ -41,7 +41,7 @@ describe('renders the app', () => {
   });
 
   it('should render the title', async () => {
-    expect(document.title).toBe("Michael D'Angelo");
+    expect(document.title).toBe('Colin Loftus');
   });
 
   it('can navigate to /about', async () => {
@@ -88,7 +88,7 @@ describe('renders the app', () => {
   });
 
   it('can navigate to /stats', async () => {
-    expect.assertions(5);
+    expect.assertions(3);
     const contactLink = document.querySelector(
       '#header > nav > ul > li:nth-child(4) > a',
     );
@@ -96,10 +96,8 @@ describe('renders the app', () => {
     await act(async () => {
       await contactLink.click();
     });
-    expect(document.title).toContain('Stats |');
+    expect(document.title).toContain('Research / Publications |');
     expect(window.location.pathname).toBe('/stats');
-    expect(global.fetch).toHaveBeenCalledTimes(1);
-    expect(jsonMock).toHaveBeenCalledTimes(1);
   });
 
   it('can navigate to /contact', async () => {

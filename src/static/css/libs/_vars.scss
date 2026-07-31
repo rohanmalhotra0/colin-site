@@ -5,8 +5,9 @@ $misc: (
 
 // Duration.
 $duration: (
-  menu: 0.5s,
-  transition: 0.2s,
+  menu: 0.45s,
+  transition: 0.25s,
+  reveal: 0.65s,
 );
 
 // Size.
@@ -21,36 +22,60 @@ $size: (
 // Font.
 $font: (
   family: (
+    "Source Sans 3",
     "Source Sans Pro",
     Helvetica,
     sans-serif,
   ),
   family-fixed: (
+    "SF Mono",
     "Courier New",
     monospace,
   ),
   family-heading: (
-    "Raleway",
+    "Newsreader",
+    Georgia,
+    "Times New Roman",
+    serif,
+  ),
+  family-label: (
+    "Source Sans 3",
     Helvetica,
     sans-serif,
   ),
   weight: 400,
   weight-bold: 700,
-  weight-heading: 400,
-  weight-heading-bold: 800,
-  weight-heading-extrabold: 900,
-  kerning-heading: 0.25em,
+  weight-heading: 500,
+  weight-heading-bold: 600,
+  weight-heading-extrabold: 600,
+  kerning-heading: 0.1em,
 );
 
 // Palette.
 $palette: (
   bg: #ffffff,
-  bg-alt: #f4f4f4,
-  fg: #646464,
-  fg-bold: #3c3b3b,
-  fg-light: #aaaaaa,
-  border: rgba(160, 160, 160, 0.3),
-  border-bg: rgba(160, 160, 160, 0.075),
-  border-alt: rgba(160, 160, 160, 0.65),
-  accent: #2e59ba,
+  bg-alt: #faf9f7,
+  fg: #57534e,
+  fg-bold: #1c1917,
+  fg-light: #a29d97,
+  border: rgba(28, 25, 23, 0.12),
+  border-bg: rgba(28, 25, 23, 0.045),
+  border-alt: rgba(28, 25, 23, 0.28),
+  accent: #00539f,
+  accent-hover: #003e77,
+  accent-tint: rgba(0, 83, 159, 0.08),
+  gold: #ffd200,
 );
+
+// Easings — editorial motion settles fast: no springs, no bounces.
+$ease-out-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94); // hovers, color, underlines
+$ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1); // entrances, menu slide, bar draw
+
+// Shadows.
+$shadow-card: 0 1px 2px rgba(28, 25, 23, 0.04),
+  0 6px 24px -8px rgba(28, 25, 23, 0.08);
+$shadow-card-hover: 0 2px 4px rgba(28, 25, 23, 0.05),
+  0 12px 32px -8px rgba(28, 25, 23, 0.12);
+$shadow-header: 0 1px 0 rgba(28, 25, 23, 0.08);
+$shadow-menu: -12px 0 40px rgba(28, 25, 23, 0.14);
+$shadow-photo: 8px 8px 0 -2px rgba(255, 210, 0, 0.9); // gold offset frame

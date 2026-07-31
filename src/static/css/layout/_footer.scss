@@ -9,13 +9,26 @@
 #footer {
   .icons {
     color: _palette(fg-light);
+
+    a {
+      background-image: none;
+      color: _palette(fg-light);
+      padding: 0.5em;
+      transition: color #{_duration(transition)} $ease-out-soft;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      a:hover {
+        color: _palette(accent);
+      }
+    }
   }
 
   .copyright {
     color: _palette(fg-light);
-    font-family: _font(family-heading);
+    font-family: _font(family-label);
     font-size: 0.5em;
-    font-weight: _font(weight-heading);
+    font-weight: 600;
     letter-spacing: _font(kerning-heading);
     text-transform: uppercase;
   }
