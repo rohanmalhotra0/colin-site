@@ -12,7 +12,9 @@ const Index = () => (
             <Link to="/">Colin Loftus</Link>
           </h2>
           <p>
-            Sophmore studying at the University of Delaware, majoring in Marketing.
+            Junior at the University of Delaware&apos;s Lerner College of
+            Business, majoring in Marketing with a minor in Sports Business
+            Analytics.
           </p>
         </div>
       </header>

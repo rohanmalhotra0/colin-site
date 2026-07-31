@@ -6,15 +6,13 @@ import ContactIcons from '../Contact/ContactIcons';
 const SideBar = () => (
   <section id="sidebar">
     <section id="intro">
-      <img
-        src={`${process.env.PUBLIC_URL}/profile.jpg`}
-        alt="Colin Loftus"
-        style={{ width: '150px', borderRadius: '8px' }}
-      />
+      <Link to="/" className="logo">
+        <img src={`${process.env.PUBLIC_URL}/profile.jpg`} alt="Colin Loftus" />
+      </Link>
       <header>
         <h2>Colin Loftus</h2>
         <p>
-          <a href="mailto:colinploftus@gmail.com">colinploftus@gmail.com</a>
+          <a href="mailto:colinlof@udel.edu">colinlof@udel.edu</a>
         </p>
       </header>
     </section>
@@ -22,9 +20,10 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        Hi, I&apos;m Colin Loftus.  I’m from a very boring town in North New Jersey called Chatham.
-        I am currently a student at the University of Delaware and am a Business Undeclared major
-        though I am very interested in exploring the marketing world.
+        Hi, I&apos;m Colin. I&apos;m a junior at the University of
+        Delaware&apos;s Lerner College of Business majoring in Marketing with a
+        minor in Sports Business Analytics. I&apos;m chasing a career where the
+        business side of sports meets the fans.
       </p>
       <ul className="actions">
         <li>

@@ -1,7 +1,7 @@
 const degrees = [
   {
-    school: 'University of Delaware',
-    degree: 'B.S. in Marketing',
+    school: 'University of Delaware — Lerner College of Business',
+    degree: 'B.S. Marketing, Minor in Sports Business Analytics — Dean’s List',
     link: 'http://udel.edu/apply/undergraduate-admissions/major-finder/marketing/',
     year: 2028,
   },
