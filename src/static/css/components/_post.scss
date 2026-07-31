@@ -10,11 +10,15 @@
   @include padding(_size(section-spacing), _size(section-spacing));
   background: _palette(bg);
   border: solid 1px _palette(border);
+  border-radius: 14px;
+  box-shadow: $shadow-card;
   margin: 0 0 _size(section-spacing) 0;
+  overflow: hidden;
   position: relative;
 
   > header {
     @include vendor("display", "flex");
+    background: linear-gradient(#ffffff, #fcfbfa);
     border-bottom: solid 1px _palette(border);
     left: (_size(section-spacing) * -1);
     margin: (_size(section-spacing) * -1) 0 _size(section-spacing) 0;
@@ -29,7 +33,20 @@
 
       h2 {
         font-weight: _font(weight-heading-extrabold);
-        font-size: 1.5em;
+        font-size: 2.1em;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+
+      p {
+        color: _palette(fg-light);
+        font-family: _font(family);
+        font-size: 0.85em;
+        font-weight: _font(weight);
+        letter-spacing: 0.01em;
+        line-height: 1.6;
+        margin-top: 0;
+        text-transform: none;
       }
 
       > :last-child {
@@ -55,9 +72,10 @@
       .published {
         color: _palette(fg-bold);
         display: block;
-        font-family: _font(family-heading);
+        font-family: _font(family-label);
         font-size: 0.7em;
-        font-weight: _font(weight-heading-bold);
+        font-variant-numeric: tabular-nums;
+        font-weight: 600;
         letter-spacing: _font(kerning-heading);
         margin-top: 0.5em;
         text-transform: uppercase;
@@ -70,15 +88,14 @@
     overflow: hidden;
 
     img {
-      @include vendor(
-        "transition",
-        "transform #{_duration(transition)} ease-out"
-      );
+      transition: transform #{_duration(reveal)} $ease-out-quint;
     }
 
-    &:hover {
-      img {
-        @include vendor("transform", "scale(1.05)");
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        img {
+          @include vendor("transform", "scale(1.03)");
+        }
       }
     }
   }
@@ -99,9 +116,9 @@
       li {
         border-left: solid 1px _palette(border);
         display: inline-block;
-        font-family: _font(family-heading);
-        font-size: 0.6em;
-        font-weight: _font(weight-heading);
+        font-family: _font(family-label);
+        font-size: 0.65em;
+        font-weight: 600;
         letter-spacing: _font(kerning-heading);
         line-height: 1;
         margin: 0 0 0 2em;
@@ -128,7 +145,9 @@
 
   @include breakpoint(medium) {
     border-left: 0;
+    border-radius: 0;
     border-right: 0;
+    box-shadow: none;
     left: _size(section-spacing) * -1;
     width: calc(100% + (#{_size(section-spacing)} * 2));
 
@@ -197,6 +216,8 @@
       _size(section-spacing-small),
       _size(section-spacing-small)
     );
+    border-radius: 0;
+    box-shadow: none;
     left: _size(section-spacing-small) * -1;
     margin: 0 0 _size(element-margin) 0;
     width: calc(100% + (#{_size(section-spacing-small)} * 2));
@@ -214,7 +235,7 @@
 
       .title {
         h2 {
-          font-size: 1.1em;
+          font-size: 1.5em;
         }
       }
     }

@@ -58,15 +58,15 @@ const categories = [
   },
   {
     name: 'Marketing',
-    color: '#2e59ba',
+    color: '#0f6dbf',
   },
   {
     name: 'Leadership & Ops',
-    color: '#3f7cac',
+    color: '#003e77',
   },
   {
     name: 'Certifications & Languages',
-    color: '#6b7fd7',
+    color: '#1c1917',
   },
 ];
 

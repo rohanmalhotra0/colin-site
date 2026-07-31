@@ -1,7 +1,22 @@
-// About page (/about)
+// Stats / research page (/stats)
 
 #stats {
   table {
     width: 100%;
+
+    tbody tr {
+      transition: background-color 0.15s $ease-out-soft;
+
+      &:hover {
+        background-color: _palette(accent-tint);
+      }
+
+      td:last-child {
+        color: _palette(fg-bold);
+        font-family: _font(family-label);
+        font-variant-numeric: tabular-nums;
+        font-weight: 600;
+      }
+    }
   }
 }

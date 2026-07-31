@@ -1,11 +1,18 @@
-// Not found page
+// Hamburger menu
 
 .bm-item-list {
   margin-top: 0;
 }
 
 .menu-hover {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
   padding: 0 1em;
+  transition: opacity #{_duration(transition)} $ease-out-soft;
 }
 
 .menu-hover:hover {
@@ -17,9 +24,13 @@
 
   li a h3 {
     border: 0;
-    border-top: dotted 1px rgba(160, 160, 160, 0.3);
-    margin: 1.5em 0 0 0;
-    padding: 1.5em 0 0 0;
+    border-top: dotted 1px _palette(border);
+    font-size: 1.25em;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0.9em 0;
+    text-transform: none;
+    transition: color #{_duration(transition)} $ease-out-soft;
   }
 
   li a h3:hover {
@@ -28,10 +39,6 @@
 
   li {
     display: block !important;
-  }
-
-  h3 {
-    font-size: 0.7em;
   }
 
   .index-li {
