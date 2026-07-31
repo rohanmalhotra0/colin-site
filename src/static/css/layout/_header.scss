@@ -128,7 +128,12 @@ body {
             transition: transform #{_duration(transition)} $ease-out-soft;
           }
 
-          &:hover::after,
+          @media (hover: hover) and (pointer: fine) {
+            &:hover::after {
+              transform: scaleX(1);
+            }
+          }
+
           &:focus-visible::after {
             transform: scaleX(1);
           }
@@ -280,13 +285,13 @@ body {
 
 .open-menu {
   position: fixed;
-  right: 0;
+  right: env(safe-area-inset-right);
   border: none;
 }
 
 .close-menu {
   position: fixed;
-  right: 0;
+  right: env(safe-area-inset-right);
   z-index: 3;
   border-left: 0;
 }

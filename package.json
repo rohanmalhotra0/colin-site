@@ -13,6 +13,7 @@
   "scripts": {
     "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
     "build": "rimraf ./build && react-scripts build",
+    "postbuild": "node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\"",
     "lint": "eslint \"**/*.js\"",
     "start": "react-scripts start",
     "test": "npx jest",

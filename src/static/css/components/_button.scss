@@ -35,7 +35,17 @@ button,
     transform #{_duration(transition)} $ease-out-soft;
   white-space: nowrap;
 
-  &:hover,
+  // :hover gated so iOS sticky-hover cannot fake button state; kept as a
+  // separate rule from :focus-visible because Safari <= 15.3 drops any
+  // selector list containing an unsupported selector.
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: _palette(accent);
+      box-shadow: inset 0 0 0 1px _palette(accent);
+      color: #ffffff !important;
+    }
+  }
+
   &:focus-visible {
     background-color: _palette(accent);
     box-shadow: inset 0 0 0 1px _palette(accent);

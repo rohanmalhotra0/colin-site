@@ -44,12 +44,22 @@ body {
   *,
   *::before,
   *::after {
+    animation-delay: 0ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    transition-delay: 0ms !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 
+  .will-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+// Print / save-as-PDF must never inherit the pre-reveal hidden state.
+@media print {
   .will-reveal {
     opacity: 1 !important;
     transform: none !important;

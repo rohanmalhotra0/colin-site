@@ -16,10 +16,16 @@
   outline: none;
 }
 
-.skillbutton-active {
+.skillbutton.skillbutton-active {
   background-color: _palette(accent-tint);
   box-shadow: inset 0 0 0 1px _palette(accent);
   color: _palette(accent) !important;
+}
+
+// Selected text on the dark bar fills stays readable.
+.skillbar ::selection {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1c1917;
 }
 
 .skillbar {
