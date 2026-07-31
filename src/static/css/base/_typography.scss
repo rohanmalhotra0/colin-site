@@ -45,17 +45,24 @@ textarea {
 }
 
 a {
-  background-image: linear-gradient(currentColor, currentColor);
+  // A resting underline keeps links distinguishable without relying on
+  // color alone (accent blue and body gray have near-equal luminance).
+  background-image: linear-gradient(
+    rgba(0, 83, 159, 0.35),
+    rgba(0, 83, 159, 0.35)
+  );
   background-position: 0 92%;
   background-repeat: no-repeat;
-  background-size: 0% 1px;
+  background-size: 100% 1px;
   color: _palette(accent);
   text-decoration: none;
   transition: color #{_duration(transition)} $ease-out-soft,
-    background-size #{_duration(transition)} $ease-out-soft;
+    background-size #{_duration(transition)} $ease-out-soft,
+    background-image #{_duration(transition)} $ease-out-soft;
 
   &:hover {
-    background-size: 100% 1px;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 2px;
     color: _palette(accent-hover);
   }
 }

@@ -4,6 +4,7 @@
   .link-to {
     position: relative;
     top: -4.5em;
+    top: calc(-4.5em - env(safe-area-inset-top));
   }
 
   .link-container h4 {

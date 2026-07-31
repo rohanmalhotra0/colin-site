@@ -5,7 +5,7 @@ import Main from '../layouts/Main';
 const Stats = () => (
   <Main
     title="Research / Publications"
-    description="Explore my undergraduate research and published work in machine learning, finance, and space systems."
+    description="Research and published work on social media sentiment and financial markets."
   >
     <article className="post" id="research">
       <header>
@@ -13,10 +13,7 @@ const Stats = () => (
           <h2>
             <Link to="/stats">Research & Publications</Link>
           </h2>
-          <p>
-            A showcase of my technical research experience and scholarly
-            contributions
-          </p>
+          <p>Research I have contributed to and published work</p>
         </div>
       </header>
       <h3>📄 Publications</h3>

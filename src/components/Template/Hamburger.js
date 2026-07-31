@@ -8,19 +8,42 @@ const Menu = lazy(() => import('react-burger-menu/lib/menus/slide'));
 const Hamburger = () => {
   const [open, setOpen] = useState(false);
 
+  const toggleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setOpen(!open);
+    }
+  };
+
   return (
     <div className="hamburger-container">
       <nav className="main" id="hambuger-nav">
         <ul>
           {open ? (
             <li className="menu close-menu">
-              <div onClick={() => setOpen(!open)} className="menu-hover">
+              <div
+                onClick={() => setOpen(!open)}
+                onKeyDown={toggleKeyDown}
+                role="button"
+                tabIndex={0}
+                aria-label="Close menu"
+                aria-expanded
+                className="menu-hover"
+              >
                 &#10005;
               </div>
             </li>
           ) : (
             <li className="menu open-menu">
-              <div onClick={() => setOpen(!open)} className="menu-hover">
+              <div
+                onClick={() => setOpen(!open)}
+                onKeyDown={toggleKeyDown}
+                role="button"
+                tabIndex={0}
+                aria-label="Open menu"
+                aria-expanded={false}
+                className="menu-hover"
+              >
                 &#9776;
               </div>
             </li>
